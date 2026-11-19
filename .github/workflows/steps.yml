@@ -1,0 +1,25 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Steps Examples
+
+# Controls when the workflow will run
+on:
+ workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  steps-example:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Create directory
+        run: mkdir testmachine
+        
+      - name: Get system Information
+        run: uname
+
+      - name: verify output file
+        run: cat testmachine/output.txt
+
+      - name: Verify directories and contents
+        run: ls -alhr
