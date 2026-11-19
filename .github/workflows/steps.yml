@@ -16,10 +16,10 @@ jobs:
         run: mkdir testmachine
         
       - name: Get system Information
-        run: uname
+        run: uname -a > testmachine/output.txt
 
       - name: verify output file
         run: cat testmachine/output.txt
 
       - name: Verify directories and contents
-        run: ls -alhr
+        run: ls -alhR
